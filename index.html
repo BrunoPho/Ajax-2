@@ -1,20 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<body>
-
-<h1> Produtos </h1>
-
-<div id="div1">
-
-    <h1> Ajax </h1>
-
-</div>
-
-<button> Conteudo externo </button>
-
-<button> Novo Button </button>
-
-</body>
 <head>
     <meta charset="UTF-8">
 
@@ -32,12 +17,12 @@
         });
 
         //Botão 2 da div 2
-        $(document).ready(function() {
             $("button").click(function () {
-                $("#div1").load("texto.html");
-            });
-        });
+                $.get("texto.html",  function (data, status) {
+                    $("#div1").html(data);
 
+                });
+            });
 
         /*Questão 3
 
@@ -55,4 +40,17 @@
     </script>
 
 </head>
+<body>
+
+<div id="div1">
+
+    <h1> Ajax </h1>
+
+</div>
+
+<button> Conteudo externo </button>
+
+<button> Novo Button </button>
+
+</body>
 </html>
