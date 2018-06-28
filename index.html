@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<body>
+
+<h1> Produtos </h1>
+
+<div id="div1">
+
+    <h1> Ajax </h1>
+
+</div>
+
+<button> Conteudo externo </button>
+
+<button> Novo Button </button>
+
+</body>
+<head>
+    <meta charset="UTF-8">
+
+  <title> Ajax - 2 Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+        //Botão 1 da div1
+        $(document).ready(function() {
+            $("button").click(function () {
+                $("#div1").load("texto.html");
+            });
+        });
+
+        //Botão 2 da div 2
+        $(document).ready(function() {
+            $("button").click(function () {
+                $("#div1").load("texto.html");
+            });
+        });
+
+
+        /*Questão 3
+
+        $ .click(function(){
+            $.GET(" http://.../propdutos.php ", {
+                categoria: $("input").val();
+        },
+            function(dados){
+                $("div1").html(dados);
+
+            });
+        };
+*/
+
+    </script>
+
+</head>
+</html>
